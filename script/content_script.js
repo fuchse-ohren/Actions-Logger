@@ -47,8 +47,10 @@ async function poll(){
 		var input = document.getElementsByTagName("input")
 		var input_list = new Set(log[url]["input"]);
 		for(i=0;i<input.length;i++){
-		  if(input[i].type == "submit" && input[i].value != ""){
+		  if((input[i].type == "submit" || input[i].type == "reset") && input[i].value.trim() != ""){
 		    input_list.add(input[i].value.trim())
+		  }else if(input[i].type == "image" && input[i].alt.trim() != ""){
+		    input_list.add(input[i].alt.trim())
 		  }else if(input[i].placeholder.trim() != "" && input[i].type != "hidden"){
 			input_list.add(input[i].placeholder.trim())
 		  }else if(input[i].name.trim() != "" && input[i].type != "hidden"){

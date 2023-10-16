@@ -18,7 +18,7 @@ function _putlog(url,log){
 async function poll(){
 	const targetURL = await _get_setting('targetURL');
 	const exclusionURL = await _get_setting('exclusionURL');
-	const url = location.href.split(/(#|\?|\/$)/)[0];
+	const url = location.href.split(/(#|\?|\/$|\/\?)/)[0];
 	
 	//ターゲットURLのみ記録する
 	if(targetURL.test(location.href) && !exclusionURL.test(location.href)){	//クエリなどを除外した影響が出ないように location.hrefで判定する

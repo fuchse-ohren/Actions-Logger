@@ -21,7 +21,7 @@ async function poll(){
 	const url = location.href.split(/(#|\?|\/$|\/\?)/)[0];
 	
 	//ターゲットURLのみ記録する
-	if(targetURL.test(location.href) && !exclusionURL.test(location.href)){	//クエリなどを除外した影響が出ないように location.hrefで判定する
+	if(targetURL.test(url) && !exclusionURL.test(url)){
 		var log = {};
 		log[url] = {"button":[],"link":[],"input":[]};
 		

@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Actions Logger",
-	"version": "1.0.1",
+	"version": "2.0",
 	"description": "対象URLと除外URLを正規表現で指定し、リクエストにどのようなアクションが含まれていたかを記録します。\n記録したデータはビューワーで閲覧できるだけでなくjson形式でエクスポート可能です。\n\n対応タグ:buttonタグ,aタグ,inputタグ\n\nアイコン提供: Flaticon.com",
 
 	"icons": {

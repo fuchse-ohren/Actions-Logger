@@ -23,7 +23,7 @@ if(localStorage.getItem("SPA") === null){
 
 //ターゲットURLを初期化する
 if(localStorage.getItem("targetURL") === null || localStorage.getItem("exclusionURL") === null){
-	localStorage.setItem("targetURL", 'htt(p|ps)://example.net/.*');
+	localStorage.setItem("targetURL", 'htt(p|ps)://example.net($|/.*)');
 	localStorage.setItem("exclusionURL", '(.*\\.)(jpg|jpeg|png|gif|svg|ico|css|js|woff|woff2|mp4|mp3|ts|m3u8|pdf|doc|docx|ppt|pptx|xls|xlsx|md)$');
 }
 

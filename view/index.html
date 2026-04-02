@@ -1,13 +1,27 @@
-<HTML>
-<head>
-<title>Log Viewer</title>
-</head>
+<html>
+    <head>
+        <title>アクション一覧</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/table.css" />
+    </head>
 
-<body>
-	<h1>Log Viewer</h1>
-	<table border="1" id="tbl"> 
-		<tr><td>URL</td><td>ボタン</td><td>リンク</td><td>入力</td></tr>
-	</table>
-	<script src="script.js"></script>
-</body>
-</HTML>
+    <body>
+        <h1>アクション一覧</h1>
+
+        <div class="dads-table" data-size="dense" data-row-stripe>
+            <table border="1" class="dads-table__table" data-cell-border>
+                <thead>
+                    <tr>
+                        <th class="dads-table__col-header" scope="col">URL</th>
+                        <th class="dads-table__col-header" scope="col">ボタン</th>
+                        <th class="dads-table__col-header" scope="col">リンク</th>
+                        <th class="dads-table__col-header" scope="col">入力</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl"></tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

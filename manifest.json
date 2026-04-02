@@ -1,34 +1,43 @@
 {
-	"manifest_version": 2,
-	"name": "Actions Logger",
-	"version": "2.0",
-	"description": "対象URLと除外URLを正規表現で指定し、リクエストにどのようなアクションが含まれていたかを記録します。\n記録したデータはビューワーで閲覧できるだけでなくjson形式でエクスポート可能です。\n\n対応タグ:buttonタグ,aタグ,inputタグ\n\nアイコン提供: Flaticon.com",
+  "manifest_version": 2,
+  "name": "Actions Logger",
+  "version": "3.0",
+  "description": "対象URLと除外URLを正規表現で指定し、リクエストにどのようなアクションが含まれていたかを記録します。\n記録したデータはビューワーで閲覧できるだけでなくjson形式でエクスポート可能です。\n\n対応タグ:buttonタグ,aタグ,inputタグ\n\nアイコン提供: Flaticon.com",
 
-	"icons": {
-		"512": "icons/icon.png"
-	},
+  "icons": {
+    "512": "icons/icon.png"
+  },
 
-	"permissions": ["webRequest", "<all_urls>"],
+  "permissions": ["webRequest", "<all_urls>"],
 
-	"background": {
-		"scripts": ["script/background.js"]
-	},
+  "background": {
+    "scripts": ["script/background.js"]
+  },
 
-	"browser_action": {
-		"default_icon": "icons/icon.png",
-		"default_title": "ActLog",
-		"default_popup": "settings/index.html"
-	},
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "ActLog",
+    "default_popup": "settings/index.html"
+  },
 
-	"options_ui": {
-		"page": "view/index.html",
-		"open_in_tab": true
-	},
-	
-	"content_scripts": [
+  "options_ui": {
+    "page": "view/index.html",
+    "open_in_tab": true
+  },
+
+  "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["script/content_script.js"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{df42a8b3-88ae-42cf-bf19-62dbb6177777}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }

@@ -77,7 +77,7 @@ function dl() {
   let a = document.createElement("a");
   document.body.appendChild(a);
   a.href = window.URL.createObjectURL(blob);
-  a.download = "params_log.json";
+  a.download = "actions_log.json";
   a.click();
   document.body.removeChild(a);
 }
